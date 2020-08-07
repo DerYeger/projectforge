@@ -40,21 +40,21 @@ class CalendarStyler extends Component {
             credentials: 'include',
         })
             .then(handleHTTPErrors)
-            .then(response => response.json())
+            .then((response) => response.json())
             .then(saveUpdateResponseInState)
             .then(() => {
                 if (submit) {
                     submit();
                 }
             })
-            .catch(error => alert(`Internal error: ${error}`));
+            .catch((error) => alert(`Internal error: ${error}`));
     }
 
     render() {
         const { background, visible } = this.state;
         const { calendar } = this.props;
         return (
-            <React.Fragment>
+            <>
                 <CheckBox
                     // label={translations['calendar.filter.visible']}
                     label={calendar.title}
@@ -67,7 +67,7 @@ class CalendarStyler extends Component {
                     onChangeComplete={this.handleBackgroundColorChange}
                     disableAlpha
                 />
-            </React.Fragment>
+            </>
         );
     }
 }

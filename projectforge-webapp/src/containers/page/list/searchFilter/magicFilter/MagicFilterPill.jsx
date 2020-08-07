@@ -65,7 +65,7 @@ function MagicFilterPill(
                 setIsOpen={setIsOpen}
                 isOpen={isOpen}
                 basic={(
-                    <React.Fragment>
+                    <>
                         {value && Object.keys(value).length
                             ? MagicInput.getLabel(label, value, props)
                             : label}
@@ -76,14 +76,14 @@ function MagicFilterPill(
                                 onClick={() => onFilterDelete(id)}
                             />
                         )}
-                    </React.Fragment>
+                    </>
                 )}
                 contentClassName={classNames(
                     styles.pill,
                     { [styles.marked]: isOpen || !Object.isEmpty(value) },
                 )}
                 actions={(
-                    <React.Fragment>
+                    <>
                         <AdvancedPopperAction
                             type="delete"
                             disabled={!value}
@@ -97,7 +97,7 @@ function MagicFilterPill(
                         >
                             {translations.save || ''}
                         </AdvancedPopperAction>
-                    </React.Fragment>
+                    </>
                 )}
             >
                 <p className={styles.title}>{label}</p>
@@ -144,8 +144,8 @@ const mapStateToProps = ({ list }) => ({
     translations: list.categories[list.currentCategory].ui.translations,
 });
 
-const actions = dispatch => ({
-    onFilterDelete: fieldId => dispatch(removeFilter(fieldId)),
+const actions = (dispatch) => ({
+    onFilterDelete: (fieldId) => dispatch(removeFilter(fieldId)),
     onFilterSet: (fieldId, newValue) => dispatch(setFilter(fieldId, newValue)),
 });
 

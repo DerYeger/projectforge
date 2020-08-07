@@ -24,11 +24,11 @@ export const registerComponent = (type, tag) => {
 // Renders the components out of a content array.
 export default (content) => {
     if (!content) {
-        return <React.Fragment />;
+        return <></>;
     }
 
     return (
-        <React.Fragment>
+        <>
             {content.map(({ type, key, ...props }) => {
                 const Tag = components[type];
                 const componentKey = `dynamic-layout-${key}`;
@@ -49,7 +49,7 @@ export default (content) => {
                     />
                 );
             })}
-        </React.Fragment>
+        </>
     );
 };
 

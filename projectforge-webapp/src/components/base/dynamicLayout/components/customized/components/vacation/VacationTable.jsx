@@ -9,13 +9,13 @@ function VacationTable() {
     const { data, ui } = React.useContext(DynamicLayoutContext);
 
     if (!data.vacations) {
-        return <React.Fragment />;
+        return <></>;
     }
 
     const { vacationsCurrentYear, vacationsPreviousYear, leaveAccountEntries } = data.vacations;
 
     return (
-        <React.Fragment>
+        <>
             <h4>{ui.translations['vacation.title.list']}</h4>
             <Table striped hover>
                 <thead>
@@ -37,7 +37,7 @@ function VacationTable() {
                 </tbody>
             </Table>
             <VacationLeaveAccountTable entries={leaveAccountEntries} />
-        </React.Fragment>
+        </>
     );
 }
 

@@ -32,7 +32,6 @@ class Category extends React.Component {
     handleWindowResize() {
         const { innerWidth: viewportWidth } = window;
 
-
         let collapse = true;
 
         if (viewportWidth < 735) {
@@ -54,7 +53,7 @@ class Category extends React.Component {
             return;
         }
 
-        this.setState(state => ({
+        this.setState((state) => ({
             collapse: !state.collapse,
         }));
     }
@@ -89,7 +88,7 @@ class Category extends React.Component {
                 </div>
                 <Collapse isOpen={collapse}>
                     <ul className={style.categoryLinks}>
-                        {category.subMenu.map(item => (
+                        {category.subMenu.map((item) => (
                             <li
                                 className={style.categoryLink}
                                 key={`category-link-${item.key}`}

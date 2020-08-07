@@ -31,7 +31,7 @@ MagicCheckboxInput.defaultProps = {};
 
 MagicCheckboxInput.isEmpty = ({ value }) => value === 'false';
 
-MagicCheckboxInput.getLabel = label => label;
+MagicCheckboxInput.getLabel = (label) => label;
 
 MagicCheckboxInput.defaultValue = { value: 'true' };
 

@@ -27,7 +27,7 @@ function MagicFilters(
     const searchRef = React.useRef(null);
 
     if (!searchFilter) {
-        return <React.Fragment />;
+        return <></>;
     }
 
     const setIsOpen = (open) => {
@@ -67,10 +67,10 @@ function MagicFilters(
                     setIsOpen={setIsOpen}
                     isOpen={allFiltersAreOpen}
                     basic={(
-                        <React.Fragment>
+                        <>
                             {`${translations.searchFilter} `}
                             <FontAwesomeIcon icon={faFilter} />
-                        </React.Fragment>
+                        </>
                     )}
                     className={styles.allFilters}
                     contentClassName={classNames(
@@ -118,8 +118,8 @@ function MagicFilters(
                 </AdvancedPopper>
             </div>
             {searchFilter.content
-                .filter(filter => filter.defaultFilter)
-                .map(filter => (
+                .filter((filter) => filter.defaultFilter)
+                .map((filter) => (
                     <MagicFilterPill
                         key={`magic-filter-default-${filter.id}`}
                         {...Array.findByField(filterEntries, 'field', filter.id)}
@@ -127,12 +127,12 @@ function MagicFilters(
                     />
                 ))}
             {filterEntries
-                .map(entry => ({
+                .map((entry) => ({
                     ...Array.findByField(searchFilter.content, 'id', entry.field),
                     ...entry,
                 }))
                 .filter(({ id, defaultFilter }) => id !== undefined && !defaultFilter)
-                .map(entry => (
+                .map((entry) => (
                     <MagicFilterPill
                         key={`magic-filter-${entry.id}`}
                         {...entry}
@@ -171,7 +171,7 @@ const mapStateToProps = ({ list }) => {
     };
 };
 
-const actions = dispatch => ({
+const actions = (dispatch) => ({
     onResetAllFilters: () => dispatch(resetAllFilters()),
 });
 

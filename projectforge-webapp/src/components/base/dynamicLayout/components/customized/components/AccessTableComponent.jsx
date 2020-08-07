@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Button } from 'reactstrap';
 import { DynamicLayoutContext } from '../../../context';
-import {Button} from "reactstrap";
 
-function AccessTableComponent({user}) {
-    const { data, callAction} = React.useContext(DynamicLayoutContext);
+function AccessTableComponent({ user }) {
+    const { data, callAction } = React.useContext(DynamicLayoutContext);
 
     const clear = () => callAction({
         responseAction: {
@@ -43,159 +43,157 @@ function AccessTableComponent({user}) {
 
     return React.useMemo(
         () => (
-            <React.Fragment>
+            <>
                 <table>
                     <tbody>
-                    <tr>
-                        <th>Access management</th>
-                        <td>
-                            <div className="btn-group" data-toggle="buttons">
+                        <tr>
+                            <th>Access management</th>
+                            <td>
+                                <div className="btn-group" data-toggle="buttons">
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id10"/>
-                                    Select
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id10" />
+                                        Select
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id11"/>
-                                    Insert
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id11" />
+                                        Insert
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id12"/>
-                                    Update
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id12" />
+                                        Update
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id13"/>
-                                    Delete
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id13" />
+                                        Delete
+                                    </label>
 
-                            </div>
-                        </td>
-                    </tr>
+                                </div>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <th>Structure elements</th>
-                        <td>
-                            <div className="btn-group" data-toggle="buttons">
+                        <tr>
+                            <th>Structure elements</th>
+                            <td>
+                                <div className="btn-group" data-toggle="buttons">
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id14"/>
-                                    Select
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id14" />
+                                        Select
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id15"/>
-                                    Insert
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id15" />
+                                        Insert
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id16"/>
-                                    Update
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id16" />
+                                        Update
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id17"/>
-                                    Delete
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id17" />
+                                        Delete
+                                    </label>
 
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Time sheets</th>
-                        <td>
-                            <div className="btn-group" data-toggle="buttons">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Time sheets</th>
+                            <td>
+                                <div className="btn-group" data-toggle="buttons">
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id18"/>
-                                    Select
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id18" />
+                                        Select
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id19"/>
-                                    Insert
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id19" />
+                                        Insert
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id1a"/>
-                                    Update
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id1a" />
+                                        Update
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id1b"/>
-                                    Delete
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id1b" />
+                                        Delete
+                                    </label>
 
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Own time sheets</th>
-                        <td>
-                            <div className="btn-group" data-toggle="buttons">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Own time sheets</th>
+                            <td>
+                                <div className="btn-group" data-toggle="buttons">
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id1c"/>
-                                    Select
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id1c" />
+                                        Select
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id1d"/>
-                                    Insert
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id1d" />
+                                        Insert
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id1e"/>
-                                    Update
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id1e" />
+                                        Update
+                                    </label>
 
-                                <label className="btn btn-xs btn-primary">
-                                    <input type="checkbox" id="id1f"/>
-                                    Delete
-                                </label>
+                                    <label className="btn btn-xs btn-primary">
+                                        <input type="checkbox" id="id1f" />
+                                        Delete
+                                    </label>
 
-                            </div>
-                        </td>
-                    </tr>
+                                </div>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
 
-                <br/>
-
+                <br />
 
                 <div>
                     Access Templates
 
-                    <Button id={"quickselect_clear"} onClick={clear}>
+                    <Button id="quickselect_clear" onClick={clear}>
                         Clear
                     </Button>
 
-                    <Button id={"quickselect_guest"}  onClick={guest}>
+                    <Button id="quickselect_guest" onClick={guest}>
                         Guest
                     </Button>
 
-                    <Button id={"quickselect_employee"}  onClick={employee}>
+                    <Button id="quickselect_employee" onClick={employee}>
                         Employee
                     </Button>
 
-                    <Button id={"quickselect_leader"}  onClick={leader}>
+                    <Button id="quickselect_leader" onClick={leader}>
                         Leader
                     </Button>
 
-                    <Button id={"quickselect_administrator"}  onClick={administrator}>
+                    <Button id="quickselect_administrator" onClick={administrator}>
                         Administrator
                     </Button>
                 </div>
-            </React.Fragment>
-        )
+            </>
+        ),
     );
 }
 
 const mapStateToProps = ({ authentication }) => ({
     user: authentication.user,
 });
-
 
 export default connect(mapStateToProps)(AccessTableComponent);

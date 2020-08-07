@@ -46,7 +46,7 @@ function TaskTreeTableEntry({ task, consumptionBarClickable }) {
             <td>{task.shortDescription}</td>
 
             {!shortForm ? (
-                <React.Fragment>
+                <>
 
                     {columnsVisibility.protectionUntil ? (
                         <td>
@@ -68,7 +68,7 @@ function TaskTreeTableEntry({ task, consumptionBarClickable }) {
                         <td>{task.responsibleUser ? task.responsibleUser.fullname : ''}</td>
                     ) : undefined}
 
-                </React.Fragment>
+                </>
             ) : undefined}
         </tr>
     );
@@ -95,6 +95,5 @@ TaskTreeTableEntry.propTypes = {
 TaskTreeTableEntry.defaultProps = {
     consumptionBarClickable: undefined,
 };
-
 
 export default TaskTreeTableEntry;

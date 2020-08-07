@@ -19,7 +19,7 @@ function DynamicAutoCompletion(
             <TextAutoCompletion
                 inputId={`${ui.uid}-${id}`}
                 inputProps={{ label }}
-                onChange={completion => setData({ [id]: completion })}
+                onChange={(completion) => setData({ [id]: completion })}
                 url={url}
                 value={data[id]}
                 {...props}

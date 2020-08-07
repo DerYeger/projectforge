@@ -34,7 +34,7 @@ function NavigationDropdown(
                 <FontAwesomeIcon icon={faChevronDown} />
             </DropdownToggle>
             <DropdownMenu>
-                {subMenu.map(item => (
+                {subMenu.map((item) => (
                     <DropdownItem
                         key={`entry-item-${entryKey || id}-${item.key || item.id}`}
                     >

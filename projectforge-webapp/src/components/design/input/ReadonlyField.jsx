@@ -44,21 +44,21 @@ function ReadonlyField(
     };
 
     return (
-        <React.Fragment>
+        <>
             <InputContainer
                 className={styles.readOnly}
                 label={(
-                    <React.Fragment>
+                    <>
                         {label}
                         {tooltip && (
-                            <React.Fragment>
+                            <>
                                 <TooltipIcon />
                                 <UncontrolledTooltip placement="auto" target={id}>
                                     {tooltip}
                                 </UncontrolledTooltip>
-                            </React.Fragment>
+                            </>
                         )}
-                    </React.Fragment>
+                    </>
                 )}
                 id={id}
                 isActive
@@ -68,7 +68,7 @@ function ReadonlyField(
                 {...props}
             >
                 {value && (
-                    <React.Fragment>
+                    <>
                         <div className={styles.icons}>
                             {coverUp && (
                                 <FontAwesomeIcon
@@ -93,7 +93,7 @@ function ReadonlyField(
                                 style={{ width: `${value.length + 1}ch` }}
                             />
                         )}
-                    </React.Fragment>
+                    </>
                 )}
                 <p className={styles.value}>
                     <span ref={valueRef}>
@@ -105,7 +105,7 @@ function ReadonlyField(
                 </p>
             </InputContainer>
             <AdditionalLabel title={additionalLabel} />
-        </React.Fragment>
+        </>
     );
 }
 

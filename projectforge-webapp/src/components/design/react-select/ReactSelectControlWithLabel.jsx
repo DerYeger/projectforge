@@ -13,7 +13,7 @@ function ReactSelectControlWithLabel(props) {
     };
 
     return (
-        <React.Fragment>
+        <>
             <components.Control {...props} />
             <span
                 className={classNames('react-select__label', { isActive: isFocused || hasValue })}
@@ -23,7 +23,7 @@ function ReactSelectControlWithLabel(props) {
             >
                 {selectProps.label}
             </span>
-        </React.Fragment>
+        </>
     );
 }
 

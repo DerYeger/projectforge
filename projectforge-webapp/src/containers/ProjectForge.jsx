@@ -28,7 +28,7 @@ function ProjectForge(
 
         fetch(getServiceURL('/rsPublic/systemStatus'))
             .then(handleHTTPErrors)
-            .then(response => response.json())
+            .then((response) => response.json())
             .then((json) => {
                 const { setupRedirectUrl } = json;
                 setSystemStatus(json);
@@ -54,7 +54,7 @@ function ProjectForge(
                 {wicketRoute}
                 <Route
                     path={`${prefix}public/:category/:type?`}
-                    render={props => <FormPage {...props} isPublic />}
+                    render={(props) => <FormPage {...props} isPublic />}
                 />
                 <Route
                     path={prefix}
@@ -106,7 +106,7 @@ ProjectForge.defaultProps = {
     user: undefined,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
     loginInProgress: state.authentication.loading,
     user: state.authentication.user,
 });

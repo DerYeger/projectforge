@@ -35,14 +35,14 @@ function DynamicAttachmentList(
             },
         )
             .then(handleHTTPErrors)
-            .then(response => response.json())
-            .then(json => callAction({ responseAction: json }))
+            .then((response) => response.json())
+            .then((json) => callAction({ responseAction: json }))
             .catch((catchError) => {
                 alert(catchError);
             });
     };
 
-    const handleRowClick = entry => (event) => {
+    const handleRowClick = (entry) => (event) => {
         event.stopPropagation();
         callAction({
             responseAction: {
@@ -52,7 +52,7 @@ function DynamicAttachmentList(
         });
     };
 
-    const handleDownload = entryId => (event) => {
+    const handleDownload = (entryId) => (event) => {
         event.stopPropagation();
         callAction({
             responseAction: {
@@ -86,7 +86,7 @@ function DynamicAttachmentList(
                                 </tr>
                             </thead>
                             <tbody>
-                                {attachments.map(entry => (
+                                {attachments.map((entry) => (
                                     <tr key={entry.fileId} onClick={handleRowClick(entry)}>
                                         <td>
                                             <span
@@ -112,9 +112,9 @@ function DynamicAttachmentList(
             );
         }
         return (
-            <React.Fragment>
+            <>
                 {ui.translations['attachment.onlyAvailableAfterSave']}
-            </React.Fragment>
+            </>
         );
     }, [setData, id, attachments]);
 }

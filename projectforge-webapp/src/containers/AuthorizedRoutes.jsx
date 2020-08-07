@@ -41,7 +41,7 @@ function AuthorizedRoutes(
 
     const { background } = location.state || {};
 
-    const routes = switchLocation => (
+    const routes = (switchLocation) => (
         <Switch location={switchLocation}>
             {wicketRoute}
             <Route
@@ -69,7 +69,7 @@ function AuthorizedRoutes(
     );
 
     return (
-        <React.Fragment>
+        <>
             <Helmet>
                 <html lang={locale} />
             </Helmet>
@@ -93,7 +93,7 @@ function AuthorizedRoutes(
                     </ModalBody>
                 </Modal>
             )}
-        </React.Fragment>
+        </>
     );
 }
 

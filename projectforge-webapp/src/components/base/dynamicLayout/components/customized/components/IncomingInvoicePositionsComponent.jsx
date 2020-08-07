@@ -47,7 +47,7 @@ function IncomingInvoicePositionsComponent() {
 
         if (positionen === undefined || positionen.length === 0) {
             return (
-                <React.Fragment>
+                <>
                     <div className="row">
                         <button
                             value="Do it!"
@@ -62,7 +62,7 @@ function IncomingInvoicePositionsComponent() {
                             Add
                         </button>
                     </div>
-                </React.Fragment>
+                </>
             );
         }
 
@@ -119,7 +119,7 @@ function IncomingInvoicePositionsComponent() {
                                                         autoComplete="off"
                                                         title=""
                                                         className="text ac_input"
-                                                        onChange={e => handleQuantityChange(i, e)}
+                                                        onChange={(e) => handleQuantityChange(i, e)}
                                                     />
                                                 </div>
                                             </div>
@@ -262,7 +262,7 @@ function IncomingInvoicePositionsComponent() {
         }
 
         return (
-            <React.Fragment>
+            <>
                 {positions}
                 <div className="row">
                     <button
@@ -278,10 +278,9 @@ function IncomingInvoicePositionsComponent() {
                         Add
                     </button>
                 </div>
-            </React.Fragment>
+            </>
         );
     }
-
 
     return React.useMemo(
         () => loadPositions(),
@@ -291,6 +290,5 @@ function IncomingInvoicePositionsComponent() {
 const mapStateToProps = ({ authentication }) => ({
     user: authentication.user,
 });
-
 
 export default connect(mapStateToProps)(IncomingInvoicePositionsComponent);

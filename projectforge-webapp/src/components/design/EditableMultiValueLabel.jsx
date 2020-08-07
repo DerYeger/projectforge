@@ -42,9 +42,9 @@ function EditableMultiValueLabel({ data, selectProps, ...props }) {
                 credentials: 'include',
             })
                 .then(handleHTTPErrors)
-                .then(response => response.json())
+                .then((response) => response.json())
                 .then(saveUpdateResponseInState)
-                .catch(error => alert(`Internal error: ${error}`));
+                .catch((error) => alert(`Internal error: ${error}`));
         }
 
         setIsOpen(false);
@@ -69,8 +69,8 @@ function EditableMultiValueLabel({ data, selectProps, ...props }) {
     }
 
     const selectHandler = {
-        onClick: event => event.stopPropagation(),
-        onMouseDown: event => event.stopPropagation(),
+        onClick: (event) => event.stopPropagation(),
+        onMouseDown: (event) => event.stopPropagation(),
         onKeyDown: (event) => {
             event.stopPropagation();
 

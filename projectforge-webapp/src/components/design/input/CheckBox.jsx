@@ -19,7 +19,7 @@ function CheckBox(
     },
 ) {
     return (
-        <React.Fragment>
+        <>
             <div
                 className={classNames(style.formGroup, className, style.checkboxGroup)}
                 id={`checkboxContainer-${id}`}
@@ -46,7 +46,7 @@ function CheckBox(
                     {tooltip}
                 </UncontrolledTooltip>
             )}
-        </React.Fragment>
+        </>
     );
 }
 

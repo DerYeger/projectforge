@@ -79,7 +79,7 @@ class CalendarPage extends React.Component {
     }
 
     onDefaultCalendarChange(defaultCalendarId) {
-        this.setState(currentState => ({
+        this.setState((currentState) => ({
             filter: {
                 ...currentState.filter,
                 defaultCalendarId,
@@ -87,9 +87,8 @@ class CalendarPage extends React.Component {
         }));
     }
 
-
     onGridSizeChange(gridSize) {
-        this.setState(currentState => ({
+        this.setState((currentState) => ({
             filter: {
                 ...currentState.filter,
                 gridSize,
@@ -186,7 +185,7 @@ class CalendarPage extends React.Component {
 
         const { match, location } = this.props;
 
-        const options = teamCalendars.map(option => ({
+        const options = teamCalendars.map((option) => ({
             ...option,
             filterType: 'COLOR_PICKER',
             label: option.title,
@@ -211,8 +210,8 @@ class CalendarPage extends React.Component {
                                                 components={{
                                                     MultiValueLabel: EditableMultiValueLabel,
                                                 }}
-                                                getOptionLabel={option => (option.title)}
-                                                getOptionValue={option => (option.id)}
+                                                getOptionLabel={(option) => (option.title)}
+                                                getOptionValue={(option) => (option.id)}
                                                 isClearable
                                                 isMulti
                                                 onChange={this.onChange}
@@ -221,7 +220,7 @@ class CalendarPage extends React.Component {
                                                 setMultiValue={this.handleMultiValueChange}
                                                 styles={customStyles}
                                                 values={colors}
-                                                value={activeCalendars.map(option => ({
+                                                value={activeCalendars.map((option) => ({
                                                     ...option,
                                                     filterType: 'COLOR_PICKER',
                                                     label: option.title,
